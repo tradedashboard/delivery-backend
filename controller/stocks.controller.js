@@ -4,6 +4,7 @@ exports.stocksDelivery = async(req, res, next)=>{
     const {symbol} = req.body; 
     console.log(symbol)
     let options = {
+        pythonPath: 'python',
         scriptPath : 'D:/delivery data stocks/backend/stock/controller',
         args : [symbol]
     }
