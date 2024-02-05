@@ -5,7 +5,7 @@ exports.stocksDelivery = async(req, res, next)=>{
     console.log(symbol)
     let options = {
         pythonPath: 'python',
-        scriptPath : 'D:/delivery data stocks/backend/stock/controller',
+        scriptPath : './controller',
         args : [symbol]
     }
     PythonShell.run('delivery.py', options).then(messages=>{
